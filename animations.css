@@ -1,0 +1,58 @@
+#dog .walking {
+  -webkit-animation:dogWalking 1s infinite;
+  -webkit-animation-timing-function:linear; /* Safari and Chrome */
+  -webkit-animation-play-state:paused;
+  background-repeat:no-repeat;
+}
+#dog.idle .sniff {
+  -webkit-animation:dogSniffing .75s infinite;
+  -webkit-animation-timing-function:linear; /* Safari and Chrome */
+  -webkit-animation-play-state:running;
+}
+
+.laughing {
+  -webkit-animation:dogLaughing .25s infinite;
+  -webkit-animation-timing-function:linear; /* Safari and Chrome */
+  -webkit-animation-play-state:running;
+}
+
+/*  KEYFRAME SEQUENCES  */
+
+@-webkit-keyframes dogWalking
+{
+  0% {background-image:url(images/dog-2.png);}
+    24.99% {background-image:url(images/dog-2.png);}
+  25% {background-image:url(images/dog-3.png);}
+    49.99% {background-image:url(images/dog-3.png);}
+  50% {background-image:url(images/dog-4.png);}
+    74.99% {background-image:url(images/dog-4.png);}
+  75% {background-image:url(images/dog-5.png);}
+    99.99% {background-image:url(images/dog-5.png);}
+  100% {background-image:url(images/dog-2.png);}
+}
+
+@-webkit-keyframes dogSniffing
+{
+  0% {background-image:url(images/dog-1.png);}
+    12.49% {background-image:url(images/dog-1.png);}
+  12.5% {background-image:url(images/dog-2.png);}
+    24.99% {background-image:url(images/dog-2.png);}
+  25% {background-image:url(images/dog-1.png);}
+    37.49% {background-image:url(images/dog-1.png);}
+  37.5% {background-image:url(images/dog-2.png);}
+  100% {background-image:url(images/dog-2.png);}
+}
+
+@-webkit-keyframes moveRight {100% {left:1000px;}}
+@-webkit-keyframes moveLeft {100% {left:-100px;}}
+
+@-webkit-keyframes dogLaughing
+{
+  0% {
+    background-image:url(images/dog-laugh-1.png);
+    top:77%;
+  }
+  49.99% {background-image:url(images/dog-laugh-1.png);}
+  50% {background-image:url(images/dog-laugh-2.png);}
+  100% {background-image:url(images/dog-laugh-2.png);}
+}

@@ -1,0 +1,107 @@
+body {
+  font-family:Arial;
+}
+
+.content {
+  position:relative;
+  width:900px;
+  margin:0 auto;
+}
+
+.environment {
+  position:relative;
+  width:100%;
+  height:400px;
+  background:#7AE5DB;
+  overflow:hidden;
+}
+
+.landscape {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:372px;
+  background:url(landscape.gif) no-repeat;
+}
+
+#dog {
+  position:absolute;
+  bottom:25px;
+  left:422px;
+  width:56px;
+  height:56px;
+  vertical-align:bottom;
+  -webkit-transform: rotateY(0deg);
+  overflow:visible;
+}
+  #dog.left {
+    -webkit-transform: rotateY(180deg);
+  }
+  
+  
+.perkup {
+  display:none;
+  background:url(images/dog-perk.png) no-repeat;
+  height:48px;
+  width:55px;
+  margin-top:-5px;
+}
+
+  #dog.up .perkup {
+    display:block;
+  }
+  #dog.up.left .perkup,
+  #dog.idle.left .sniff
+   {
+    -webkit-transform: rotateY(0reg);
+  }
+#dog .walking, #dog .sniff {
+  display:block;
+  width:55px;
+  height:43px;
+  background:url(images/dog-2.png) no-repeat;
+}
+
+#dog.up .walking,
+#dog.idle .walking  {
+  display:none;
+}
+
+#dog.walking .sniff,
+#dog.idle.up .sniff {
+  display:none;
+}
+
+.laughing {
+  position:absolute;
+  top:77%;
+  left:50%;
+  width:29px;
+  height:43px;
+  display:none;
+  background-image:url(images/dog-laugh-1.png) no-repeat;
+}
+
+.controls {
+  position:absolute;
+  bottom:-35px;
+  left:0;
+}
+
+.controls ul {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+
+.controls li {
+  display:inline-block;
+  padding:2px 4px;
+  margin:0 5px 0 0;
+  background:#ccc;
+  border:1px solid #000;
+  border-radius:5px;
+  text-align:center;
+  cursor:pointer;
+}
